@@ -41,6 +41,9 @@ public class Job {
         Job job = (Job) o;
         return id == job.id;
     }
+    public static void resetId(){
+        nextId = 1;
+    }
 
     @Override
     public int hashCode() {
@@ -50,17 +53,7 @@ public class Job {
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
-    public static void setNextId(int nextId) {
-        Job.nextId = nextId;
-    }
 
-    public static int getNextId() {
-        return nextId;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getId(){
         return id;
